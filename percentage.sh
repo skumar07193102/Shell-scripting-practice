@@ -2,4 +2,4 @@
 x=500
 y=1000
 percentage=perc
-$percentage=($x/$y)*100
+$percentage=(x/y)*100
