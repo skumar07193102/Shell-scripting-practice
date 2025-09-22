@@ -1,0 +1,11 @@
+#1 /bin/bash
+user=$(id -u)
+if [ $user -ne 0 ]; then
+    echo " Command has to run with root previliges"
+fi
+dnf install mysql -y
+if [ $? -ne 0 ]; then
+    echo "installation failed"
+else
+    echo :installation successfull"
+fi
