@@ -2,6 +2,7 @@
 user=$(id -u)
 if [ $user -ne 0 ]; then
     echo " Command has to run with root previliges"
+    exit 1
 fi
 dnf install mysql -y
 if [ $? -ne 0 ]; then
