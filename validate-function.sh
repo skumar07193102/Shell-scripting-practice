@@ -8,15 +8,15 @@ else
 fi
 VALIDATE(){
     if [ $1 -eq 0 ]; then
-    echo "  $2 Installation is sucessfull"
-else
-    echo " $2 Installation failed"
+    echo "  $2 is already installed"
     exit 1
+else
+    dnf install $2
+    echo " successfully installed $2"
 fi
 }
-dnf install python -y
+dnf list installed python
 VALIDATE $? python
-dnf install mysql -y
-VALIDATE $? mysql
-dnf install mongodb-mongosh -y
-VALIDATE $? mongodb-mongosh
+
+dnf list installed telnet 
+VALIDATE $? telnet
