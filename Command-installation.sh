@@ -15,7 +15,7 @@ else
     exit 1
 fi
 
-dnf install  -y
+dnf install mysqlll -y
 if [ $? -eq 0 ]; then
     echo " mysql Installation is sucessfull"
 else
