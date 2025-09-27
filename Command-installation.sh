@@ -7,7 +7,7 @@ else
     echo "successfully ran with root previlieges"
 fi
 
-dnf install mysql-server -y
+dnf install telneet -y
 if [ $? -eq 0 ]; then
     echo " Nodejs Installation is sucessfull"
 else
