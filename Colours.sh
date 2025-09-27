@@ -18,8 +18,8 @@ else
     echo -e " $G successfully installed $2 $N"
 fi
 }
-dnf list installed mysql-server
-VALIDATE $? mysql-server
+dnf list installed java
+VALIDATE $? java
 
 dnf list installed telnet 
 VALIDATE $? telnet
