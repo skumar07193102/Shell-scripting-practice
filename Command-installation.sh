@@ -7,7 +7,7 @@ else
     exit 1
 fi
 
-dnf install nodejs -y
+dnf install nodejs:20 -y
 if [ $? -eq 0 ]; then
     echo " Nodejs Installation is sucessfull"
 else
