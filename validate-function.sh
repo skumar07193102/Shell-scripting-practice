@@ -17,6 +17,5 @@ fi
 }
 dnf list installed mysql-server
 VALIDATE $? mysql-server
-
 dnf list installed telnet 
 VALIDATE $? telnet
