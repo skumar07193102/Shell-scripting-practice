@@ -6,6 +6,7 @@ if [ $user -ne 0 ]; then
 else
     echo "successfully ran with root previlieges"
 fi
+
 dnf install mysql-server -y
 if [ $? -eq 0 ]; then
     echo " Nodejs Installation is sucessfull"
@@ -13,6 +14,7 @@ if [ $? -eq 0 ]; then
 else
     echo " Installation failed"
 fi
+
 dnf install mysqlll -y
 if [ $? -eq 0 ]; then
     echo " mysql Installation is sucessfull"
