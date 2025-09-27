@@ -11,12 +11,12 @@ VALIDATE(){
     echo "  $2 is already installed"
     exit 1
 else
-    dnf install $2
+    dnf install $2 -y
     echo " successfully installed $2"
 fi
 }
-dnf list installed java
-VALIDATE $? java
+dnf list installed mysql-server
+VALIDATE $? mysql-server
 
 dnf list installed telnet 
 VALIDATE $? telnet
