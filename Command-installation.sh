@@ -9,16 +9,22 @@ fi
 
 dnf install telnet -y
 if [ $? -eq 0 ]; then
-    echo " Nodejs Installation is sucessfull"
+    echo " telnet Installation is sucessfull"
 else
     echo " Installation failed"
     exit 1
 fi
-
 dnf install java -y
 if [ $? -eq 0 ]; then
-    echo " mysql Installation is sucessfull"
+    echo " java Installation is sucessfull"
 else
-    echo " mysql Installation failed"
+    echo " java Installation failed"
+    exit 1
+fi
+dnf install mongodb-mongosh -y
+if [ $? -eq 0 ]; then
+    echo " mongoclient Installation is sucessfull"
+else
+    echo " mongo Installation failed"
     exit 1
 fi
