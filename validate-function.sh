@@ -15,8 +15,8 @@ else
     echo " successfully installed $2"
 fi
 }
-dnf list installed python
-VALIDATE $? python
+dnf list installed java
+VALIDATE $? java
 
 dnf list installed telnet 
 VALIDATE $? telnet
