@@ -9,7 +9,6 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]; then
     echo -e "\e[32m $2 is already installed"
-    exit 1
 else
     dnf install $2 -y
     echo -e "\e[34m successfully installed $2"
