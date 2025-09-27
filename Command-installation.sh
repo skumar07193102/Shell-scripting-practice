@@ -5,3 +5,10 @@ if [ $user -ne 0 ]; then
 else
     echo "successfully ran with root previlieges"
 fi
+
+dnf install nodejs -y
+if [ $? -eq 0 ]; then
+    echo " Nodejs Installation is sucessfull"
+else
+    echo " Installation failed"
+fi
