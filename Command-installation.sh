@@ -10,15 +10,15 @@ fi
 dnf install mysql-server -y
 if [ $? -eq 0 ]; then
     echo " Nodejs Installation is sucessfull"
-    exit 1
 else
     echo " Installation failed"
+    exit 1
 fi
 
-dnf install mysqlll -y
+dnf install  -y
 if [ $? -eq 0 ]; then
     echo " mysql Installation is sucessfull"
-    exit 1
 else
     echo " mysql Installation failed"
+    exit 1
 fi
