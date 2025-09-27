@@ -7,7 +7,7 @@ else
     echo "successfully ran with root previlieges"
 fi
 
-dnf install telneet -y
+dnf install telnet -y
 if [ $? -eq 0 ]; then
     echo " Nodejs Installation is sucessfull"
 else
