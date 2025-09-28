@@ -17,9 +17,9 @@ else
 fi
 VALIDATE(){
 if [ $1 -eq 0 ]; then
-    echo "$2 installation is $G Success $N"
+    echo  -e "$2 installation is $G Success $N"
 else
-    echo  " $2 installtion is $R Failed $N"
+    echo  -e " $2 installtion is $R Failed $N"
 fi
 }
 for packagename in {$1,$2}
@@ -29,6 +29,6 @@ if [ $? -ne 0 ]; then
     dnf install $packagename -y
     VALIDATE $? $packagename
 else 
-    echo " $packagename is already installed $Y SKIPPING $N"
+    echo -e " $packagename is already installed $Y SKIPPING $N"
 fi
 done
