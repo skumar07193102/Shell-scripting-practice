@@ -24,9 +24,9 @@ fi
 }
 for packagename in {$1,$2}
 do
-dnf list installed $packagename 
+dnf list installed $packagename &>>$logfile
 if [ $? -ne 0 ]; then
-    dnf install $packagename -y
+    dnf install $packagename -y &>>$logfile
     VALIDATE $? $packagename
 else 
     echo -e " $packagename is already installed $Y SKIPPING $N"
