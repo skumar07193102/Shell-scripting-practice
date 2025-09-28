@@ -19,7 +19,7 @@ else
     echo  "successfully installed $2"
 fi
 }
-dnf list installed mysql-server &>>$logfile
+dnf list installed $1 &>>$logfile
 VALIDATE $? mysql-server
 
 dnf list installed telnet &>>$logfile
