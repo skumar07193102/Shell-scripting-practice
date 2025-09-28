@@ -20,7 +20,7 @@ else
 fi
 }
 dnf list installed $1 &>>$logfile
-VALIDATE $? mysql-server
+VALIDATE $? $1
 
 dnf list installed telnet &>>$logfile
 VALIDATE $? telnet
